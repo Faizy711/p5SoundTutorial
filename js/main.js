@@ -1,3 +1,4 @@
+//Amplitude Example
 let audio, amp, fft
 
 function preload() {

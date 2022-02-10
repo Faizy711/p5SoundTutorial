@@ -18,6 +18,8 @@ function setup(){
     const canvas = createCanvas(windowWidth, windowHeight, WEBGL)
     canvas.mouseClicked(togglePlay)
 
+    // audio.setVolume(0.5)
+
     amp = new p5.Amplitude()
     fft = new p5.FFT()
 
@@ -36,7 +38,7 @@ function draw(){
     
 
     const mapF = map(freq, 0, 1, 0, 20)
-    const mapA = map(volume, 0, 0.5, 0, 0.5)
+    const mapA = map(volume, 0, 0.1, 0, 0.1)
 
     myShaders.setUniform('uTime', frameCount)
 
